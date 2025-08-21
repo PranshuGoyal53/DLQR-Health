@@ -1,31 +1,19 @@
 cff-version: 1.2.0
-message: If you use this software, please cite it as below.
-title: DLQR-Health: Dynamic LLM Query Router for Healthcare
+message: "If you use this software, please cite it as below."
+title: "DLQR-Health: Dynamic LLM Query Router for Healthcare"
 type: software
 authors:
   - family-names: Goyal
     given-names: Pranshu
-repository-code: https://github.com/PranshuGoyal53/DLQR-Health
-url: https://github.com/PranshuGoyal53/DLQR-Health
-license: Apache-2.0
-version: v1.0.0-thesis
+version: "v1.0.0-thesis"
 date-released: 2025-08-21
-abstract: >
-  Reproducible codebase for an MSc AI thesis on a Dynamic LLM Query Router (DLQR)
-  optimising accuracy and p95 latency under tight memory. Includes ablations,
-  calibration and end-to-end evaluation; oral-cancer biomarker case study.
-keywords:
-  - DLQR
-  - LLM routing
-  - healthcare AI
-  - oral cancer
-  - benchmarks
+repository-code: "https://github.com/PranshuGoyal53/DLQR-Health"
+url: "https://github.com/PranshuGoyal53/DLQR-Health"
 preferred-citation:
   type: software
-  title: DLQR-Health: Dynamic LLM Query Router for Healthcare
+  title: "DLQR-Health: Dynamic LLM Query Router for Healthcare"
   authors:
     - family-names: Goyal
       given-names: Pranshu
-  version: v1.0.0-thesis
-  date-released: 2025-08-21
-  url: https://github.com/PranshuGoyal53/DLQR-Health/releases/tag/v1.0.0-thesis
+  version: "v1.0.0-thesis"
+  url: "https://github.com/PranshuGoyal53/DLQR-Health/releases/tag/v1.0.0-thesis"
