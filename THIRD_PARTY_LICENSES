@@ -1,0 +1,49 @@
+# Third-Party Licenses
+
+This repository (“DLQR-Health”) includes and/or interacts with third-party software, models, and datasets.
+Each third-party component is governed by its own license. Nothing here attempts to re-license those works.
+
+> **Note**: Versions are those pinned in `pyproject.toml`/`requirements.txt` or the corresponding
+> environment file. If you change dependencies or models, update this list accordingly.
+
+## Software Dependencies (Python)
+
+| Component | License | Upstream |
+|---|---|---|
+| Python | PSF-2.0 | https://www.python.org/ |
+| NumPy | BSD-3-Clause | https://numpy.org/ |
+| SciPy | BSD-3-Clause | https://scipy.org/ |
+| pandas | BSD-3-Clause | https://pandas.pydata.org/ |
+| scikit-learn | BSD-3-Clause | https://scikit-learn.org/ |
+| PyTorch | BSD-3-Clause | https://pytorch.org/ |
+| Hugging Face Transformers | Apache-2.0 | https://github.com/huggingface/transformers |
+| Hugging Face Datasets | Apache-2.0 | https://github.com/huggingface/datasets |
+| Sentence-Transformers | Apache-2.0 | https://github.com/UKPLab/sentence-transformers |
+| FAISS (CPU) | MIT | https://github.com/facebookresearch/faiss |
+| tqdm | MIT | https://github.com/tqdm/tqdm |
+| joblib | BSD-3-Clause | https://joblib.readthedocs.io/ |
+| Matplotlib | Matplotlib License (PSF-based) | https://matplotlib.org/ |
+| Rich | MIT | https://github.com/Textualize/rich |
+
+> Some packages bundle additional data/models subject to their own licenses. See their upstream pages.
+
+## Model Weights
+
+If you use the example embeddings/LLMs below (or swap in alternatives), the **original model license applies**:
+
+| Model | Provider | License | Link |
+|---|---|---|---|
+| `sentence-transformers/all-MiniLM-L6-v2` | UKP Lab / HF | Apache-2.0 | https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2 |
+| `mistral-7b` or `mistral-7b-instruct` (if used via Ollama/HF) | Mistral AI | Apache-2.0 | https://huggingface.co/mistralai |
+
+> If you substitute models (e.g., Llama, Qwen, etc.), review and comply with their specific licenses and use restrictions.
+
+## Datasets
+
+- **Thesis datasets / synthetic case-study data**: Licensed under **CC BY-NC 4.0** (see `DATA_LICENSE`).
+- Any **external datasets** you import remain under their **original licenses**; acknowledge them in your thesis and here.
+
+## Notices
+
+- This file lists known third-party components used by DLQR-Health. It may be incomplete; consult each dependency’s repo for authoritative terms.
+- Third-party trademarks and names are the property of their respective owners.
