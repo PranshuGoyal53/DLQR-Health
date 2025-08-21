@@ -1,2 +1,4 @@
 # DLQR-Health
 Dynamic LLM Query Router for healthcare — thesis code, datasets, and benchmarks (oral-cancer biomarker case study).
+
+DLQR-Health is the reproducible codebase for my MSc AI thesis on a Dynamic LLM Query Router (DLQR) for healthcare at University of Galway, Ireland. The system routes each incoming query to the most suitable module—structured biomarker prediction, case-based retrieval, or clinical QA—optimising for accuracy, p95 latency (<100 ms target), and ≤2 GB RAM. The repo includes training and calibration code, the routing policy head, ablations (embedding model and policy width), uncertainty/hedging logic, and an end-to-end evaluation harness (AUROC/F1, latency, throughput, cost proxy). A clinical oral-cancer biomarker scenario is provided as the primary case study, with clear hooks to swap in other domains. Research use only; not for clinical decision-making.
