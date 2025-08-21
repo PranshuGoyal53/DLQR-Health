@@ -8,7 +8,7 @@ authors:
 repository-code: https://github.com/PranshuGoyal53/DLQR-Health
 url: https://github.com/PranshuGoyal53/DLQR-Health
 license: Apache-2.0
-version: "v1.0.0-thesis"
+version: v1.0.0-thesis
 date-released: 2025-08-21
 abstract: >
   Reproducible codebase for an MSc AI thesis on a Dynamic LLM Query Router (DLQR)
@@ -26,6 +26,6 @@ preferred-citation:
   authors:
     - family-names: Goyal
       given-names: Pranshu
-  year: 2025
-  version: "v1.0.0-thesis"
+  version: v1.0.0-thesis
+  date-released: 2025-08-21
   url: https://github.com/PranshuGoyal53/DLQR-Health/releases/tag/v1.0.0-thesis
