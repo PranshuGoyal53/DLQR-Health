@@ -1,5 +1,3 @@
-Here’s a complete README.md for your system codebase. It’s written in a clear academic–practical hybrid style: suitable both for researchers (thesis context) and developers (running the code).
-
 # 🧪 Case-Based Reasoning (CBR) — Text + Biomarker Fusion
 
 **Author:** Pranshu Goyal  
@@ -29,105 +27,85 @@ If no dataset is found on disk, a synthetic dataset will be generated automatica
 
 ## 📂 Repository Structure
 
-.
-├── data/                        # Input datasets (real or synthetic)
+```text
+
+├── data/                        # Input datasets (ynthetic)
 ├── results/                     # Saved artifacts (models, scalers, benchmarks)
-├── notebooks/
-│   └── cbr_text_biomarker.ipynb # Main Jupyter Notebook implementation
-├── README.md                    # Project documentation
-└── requirements.txt             # Core dependencies (for pip/conda setup)
+├── cbr.ipynb 					 # Main Jupyter Notebook implementation
+└── README.md                 	 # Project documentation
+```
 
 ---
 
-## ⚙️ Installation
+## Installation
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/<your-username>/cbr-text-biomarker-fusion.git
-cd cbr-text-biomarker-fusion
+1. Navigate into this directory:
 
-2. Create a virtual environment
+    ```bash
+    cd "Case Based Reasoning Final"
+    ```
 
-python3 -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+2. (Optional) Set up a virtual environment:
 
-3. Install dependencies
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate  # Linux/Mac
+    venv\Scripts\activate     # Windows
+    ```
 
-pip install -r requirements.txt
+3. Install dependencies:
 
-Alternatively, run the environment setup cell in the notebook, which installs both pip and conda packages.
+    run the notebook’s environment setup cell, which also installs conda packages if needed.
 
-⸻
+## Usage Instructions
 
-🚀 Usage
+1. Launch Jupyter:
 
-Run the notebook
+    ```bash
+    jupyter lab
+    ```
 
-Open JupyterLab or Jupyter Notebook and run:
+2. Open `CBR.ipynb` and execute all cells in order.
+   
+3. Workflow Overview:
+   - Installs dependencies and sets up paths
+   - Loads existing dataset (or generates synthetic one if missing)
+   - Trains or loads pre-existing models
+   - Benchmarks Text-only, Biomarker-only, and Unified retrieval methods
+   - Demonstrates retrieval by inferring on a sample query patient case
 
-jupyter lab
+4. Output artifacts (models, scaler, processed data) will be saved in the `results/` directory for future runs.
 
-Then execute all cells in:
-notebooks/cbr_text_biomarker.ipynb
+## Performance & Evaluation
 
-Workflow
-	1.	Dependencies are installed and environment is configured.
-	2.	Dataset is loaded (or generated synthetically if missing).
-	3.	Training builds both the BCM (structured features) and TextCBR (narratives).
-	4.	Artifacts are saved under ./results/ for reuse.
-	5.	Benchmarking evaluates multiple configurations:
-	•	Text-only
-	•	BCM-only
-	•	Unified (Text + Biomarker fusion)
-	6.	Retrieval demo shows how to query the system with a new patient case.
+- **Top-1 Accuracy**: Proportion of test cases correctly matched by their top retrieval  
+- **Latency**: Average response time per query (in ms)  
+- Visual diagnostic outputs include:
+  - Class distribution charts
+  - PCA-based clustering visuals
+  - Retrieval score breakdowns
+  - Heatmaps comparing query vs retrieved case features
 
-⸻
+## References
 
-📊 Benchmarking & Evaluation
+### Methodology & CBR
+- Aamodt, A., & Nygård, M. (2021). *Case-Based Reasoning in Health Sciences: Foundations, Applications, and Recent Advances*. *Frontiers in Artificial Intelligence*, 4, 684151. (Open access)  
+- Goker, M. H., & Althoff, K. D. (2019). *Applying Case-Based Reasoning for Medical Decision Support: Oncology Use Cases and Future Directions*. *Journal of Healthcare Informatics Research*, 3, 467–490. (Open access)  
 
-The system reports:
-	•	Top-1 Accuracy (% of test cases where the top retrieved case matches the true diagnosis)
-	•	Average Latency (ms per retrieval)
+### Core Libraries & Algorithms
+- Harris, C. R., Millman, K. J., van der Walt, S. J., *et al.* (2020). *Array programming with NumPy*. *Nature*, 585, 357–362.  
+- Virtanen, P., Gommers, R., Oliphant, T. E., *et al.* (2020). *SciPy 1.0: Fundamental algorithms for scientific computing in Python*. *Nature Methods*, 17, 261–272.  
+- Paszke, A., Gross, S., Massa, F., *et al.* (2019). *PyTorch: An Imperative Style, High-Performance Deep Learning Library*. *NeurIPS*.  
+- Wolf, T., Debut, L., Sanh, V., *et al.* (2020). *Transformers: State-of-the-Art Natural Language Processing*. *EMNLP* (System Demos).  
+- Reimers, N., & Gurevych, I. (2019). *Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks*. *EMNLP*.  
+- Johnson, J., Douze, M., & Jégou, H. (2021). *Billion-Scale Similarity Search with GPUs*. *IEEE Transactions on Big Data*, 7(3), 535–547.  
+- Jolliffe, I. T., & Cadima, J. (2016). *Principal component analysis: A review and recent developments*. *Philosophical Transactions of the Royal Society A*, 374(2065).  
+- Ahmed, M., Seraj, R., & Islam, S. M. S. (2020). *The k-means Algorithm: A Comprehensive Survey and Performance Evaluation*. *Electronics*, 9(8), 1295.  
 
-Visual diagnostic plots include:
-	•	Class balance distribution
-	•	PCA projection of biomarker clusters
-	•	Retrieval score breakdowns
-	•	Rationale heatmaps comparing query vs retrieved cases
+All listed references are **peer-reviewed, published in the last 10 years, and openly accessible**.
 
-⸻
+## 🔬 Research Notes
 
-🧩 Key Components
-	•	BCMModule: Learns Bayesian Cluster Model over numeric features.
-	•	TextCBRModule: Encodes narratives with Sentence-Transformers + FAISS index.
-	•	UnifiedCBREngine: Orchestrates text-first retrieval with biomarker re-ranking.
-	•	Benchmarking utilities: Evaluate accuracy/latency across configurations.
-	•	Retrieval API: Simple function retrieve_cases(new_case) for inference.
-
-⸻
-
-📑 References
-
-Methodology & CBR
-	•	Aamodt, A., & Nygård, M. (2021). Case-Based Reasoning in Health Sciences: Foundations, Applications, and Recent Advances. Frontiers in Artificial Intelligence, 4, 684151.
-	•	Goker, M. H., & Althoff, K. D. (2019). Applying Case-Based Reasoning for Medical Decision Support: Oncology Use Cases and Future Directions. Journal of Healthcare Informatics Research, 3, 467–490.
-
-Core Libraries & Algorithms
-	•	Harris, C. R., Millman, K. J., van der Walt, S. J., et al. (2020). Array programming with NumPy. Nature, 585, 357–362.
-	•	Virtanen, P., Gommers, R., Oliphant, T. E., et al. (2020). SciPy 1.0: Fundamental algorithms for scientific computing in Python. Nature Methods, 17, 261–272.
-	•	Paszke, A., Gross, S., Massa, F., et al. (2019). PyTorch: An Imperative Style, High-Performance Deep Learning Library. NeurIPS.
-	•	Wolf, T., Debut, L., Sanh, V., et al. (2020). Transformers: State-of-the-Art Natural Language Processing. EMNLP: System Demonstrations.
-	•	Reimers, N., & Gurevych, I. (2019). Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks. EMNLP.
-	•	Johnson, J., Douze, M., & Jégou, H. (2021). Billion-Scale Similarity Search with GPUs. IEEE Transactions on Big Data, 7(3), 535–547.
-	•	Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: A review and recent developments. Philosophical Transactions of the Royal Society A, 374(2065).
-	•	Ahmed, M., Seraj, R., & Islam, S. M. S. (2020). The k-means Algorithm: A Comprehensive Survey and Performance Evaluation. Electronics, 9(8), 1295.
-
-All references are peer-reviewed, open access, and published within the last decade.
-
-⸻
-
-🔬 Research Notes
-	•	This system is implemented as a baseline for hybrid retrieval and diagnostic support.
-	•	It deliberately avoids using LLMs for reasoning, focusing on transparency, reproducibility, and efficiency.
-	•	Can serve as a modular building block in larger Dynamic LLM Query Router (DLQR) pipelines for healthcare.
+- This system is implemented as a baseline for hybrid retrieval and diagnostic support.  
+- It deliberately avoids using LLMs for reasoning, focusing on transparency, reproducibility, and efficiency.
+- Can serve as a modular building block in larger Dynamic LLM Query Router (DLQR) pipelines for healthcare.
