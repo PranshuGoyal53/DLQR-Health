@@ -35,7 +35,7 @@ Key features include **temperature calibration, bandit-based exploration, circui
 
 ## 📂 Repository Structure
 
-.
+```text
 ├── data/                               # Input datasets, splits, logs, artifacts
 ├── reports/                            # Saved evaluation reports
 ├── trained_router_llm                  # Saved evaluation
@@ -44,6 +44,7 @@ Key features include **temperature calibration, bandit-based exploration, circui
 ├── QA+SUMMARIZATION RAG Modal Final/   # RAG index & document storage
 ├── README.md                           # Project documentation (this file)
 └── DLQR_notebook.ipynb                 # Main unified notebook implementation
+```
 
 ---
 
@@ -58,22 +59,26 @@ git clone https://github.com/PranshuGoyal53/DLQR-Health.git
 
 Create a fresh environment and install dependencies:
 
+```python
 python3 -m venv dlqr_env
 source dlqr_env/bin/activate   # (Linux/Mac)
 dlqr_env\Scripts\activate      # (Windows)
+```
 
-pip install -r requirements.txt
+Run the notebook’s environment setup cell, which also installs conda packages if needed.
 
 3. Prepare .env file
 
 Example .env:
 
+```python
 ROOT_DIR=.
 ROUTER_DATA_DIR=./data
 RANDOM_SEED=42
 EMBED_MODEL=all-MiniLM-L6-v2
 LLM_BACKBONE=distilbert-base-uncased
 USE_LLM_INTENT=1
+```
 
 4. Run the notebook
 
