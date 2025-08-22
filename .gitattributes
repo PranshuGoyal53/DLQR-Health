@@ -1,9 +1,9 @@
 *.pkl filter=lfs diff=lfs merge=lfs -text
 *.csv filter=lfs diff=lfs merge=lfs -text
-*.pt filter=lfs diff=lfs merge=lfs -text
 *.pth filter=lfs diff=lfs merge=lfs -text
 *.bin filter=lfs diff=lfs merge=lfs -text
 *.ckpt filter=lfs diff=lfs merge=lfs -text
 *.safetensors filter=lfs diff=lfs merge=lfs -text
+*.pt filter=lfs diff=lfs merge=lfs -text
 QA+SUMMARIZATION[[:space:]]RAG[[:space:]]Modal[[:space:]]Final/storage/default__vector_store.json filter=lfs diff=lfs merge=lfs -text
 QA+SUMMARIZATION[[:space:]]RAG[[:space:]]Modal[[:space:]]Final/storage/docstore.json filter=lfs diff=lfs merge=lfs -text
